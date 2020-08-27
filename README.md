@@ -1,7 +1,7 @@
 # demo-sharding-jdbc
 sharding-jdbc + spring boot 测试demo
 
-
+```
 CREATE TABLE `ap_info_topic0` (
   `topic_id` bigint(20) NOT NULL COMMENT '主键id',
   `topic_num` int(8) DEFAULT NULL COMMENT '题号',
@@ -33,3 +33,5 @@ CREATE TABLE `ap_info_topic1` (
   `update_time` datetime DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`topic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='题目表';
+```
+
