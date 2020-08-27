@@ -1,0 +1,41 @@
+server:
+  port: 8055
+#spring配置
+#spring:
+#  #mybatis 配置
+#  datasource:
+#    #druid数据源配置
+#    #连接池参数，初始数、最大数、最小数、获取连接等待超时时间（毫秒）
+#    druid:
+#      url: jdbc:mysql://127.0.0.1:3306/appraisal?useUnicode=true&amp;characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&&allowMultiQueries=true
+#      driver-class-name: com.mysql.jdbc.Driver
+#      username: root
+#      password: 123456
+#      initial-size: 5
+#      max-active: 20
+#      min-idle: 5
+#      max-wait: 60000
+ds:
+  datasource0:
+    url: jdbc:mysql://127.0.0.1:3306/sharding0?useUnicode=true&amp;characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+  datasource1:
+    url: jdbc:mysql://127.0.0.1:3306/sharding1?useUnicode=true&amp;characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+
+
+#指定mapper*.xml加载位置
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+
+
+logging:
+  level:
+    com: DEBUG
+
