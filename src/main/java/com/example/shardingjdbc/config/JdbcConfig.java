@@ -29,6 +29,10 @@ public class JdbcConfig {
     private String className0;
     @Value("${ds.datasource1.driver-class-name}")
     private String className1;
+    @Value("${ds.datasource0.type}")
+    private String dbType0;
+    @Value("${ds.datasource1.type}")
+    private String dbType1;
 
     public String getUrl0() {
         return url0;
@@ -92,5 +96,21 @@ public class JdbcConfig {
 
     public void setClassName1(String className1) {
         this.className1 = className1;
+    }
+
+    public String getDbType0() {
+        return dbType0;
+    }
+
+    public void setDbType0(String dbType0) {
+        this.dbType0 = dbType0;
+    }
+
+    public String getDbType1() {
+        return dbType1;
+    }
+
+    public void setDbType1(String dbType1) {
+        this.dbType1 = dbType1;
     }
 }

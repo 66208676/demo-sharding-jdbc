@@ -82,6 +82,7 @@ public class ShardingConfig {
         // 配置数据源
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(jdbcConfig.getClassName0());
+        dataSource.setDbType(jdbcConfig.getDbType0());
         dataSource.setUrl(jdbcConfig.getUrl0());
         dataSource.setUsername(jdbcConfig.getUser0());
         dataSource.setPassword(jdbcConfig.getPass0());
@@ -96,6 +97,7 @@ public class ShardingConfig {
         // 配置第一个数据源
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(jdbcConfig.getClassName1());
+        dataSource.setDbType(jdbcConfig.getDbType1());
         dataSource.setUrl(jdbcConfig.getUrl1());
         dataSource.setUsername(jdbcConfig.getUser1());
         dataSource.setPassword(jdbcConfig.getPass1());
